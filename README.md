@@ -13,7 +13,9 @@ The application continuously polls the receive line. When a byte is successfully
 *   **Peripheral Bus:** **APB1 Low-Speed Bus** running at **16 MHz**.
 *   **Baud Rate:** **9600**
 *   **BRR Calculation:**
-    \[\text{USARTDIV} = \frac{16,000,000}{16 \times 9600} = 104.1667\]
+    $$
+    \text{USARTDIV} = \frac{16,000,000}{16 \times 9600} = 104.1667
+    $$
     *   **Mantissa (Tam Kısım):** 104 → `0x68`
     *   **Fraction (Kesir Kısmı):** 0.1667 × 16 ≈ 2.66 → Yuvarlama ile `3` (`0x3`)
     *   **USART2->BRR Value:** `0x0683`
